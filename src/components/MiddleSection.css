@@ -1,0 +1,136 @@
+.middle-section{
+    width: 400px;
+    padding: 1rem;
+    margin-left: 25rem;
+}
+.input-label{
+    display: inline-block;
+    width: 100%;
+}
+
+ .input-text{
+    width: 100%;
+    display: flex;
+    margin-top: .5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: .5rem;
+    border: none;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+    box-sizing: border-box;
+
+}
+
+
+.option-box{
+    margin-top: .3rem;
+    padding: 1rem;
+    border: none;
+    background-color: #f2f2f2;
+    border-radius: 2%;
+    width: 12rem;
+}
+
+.selector{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.profile-text{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+.personal-info, .professional-info{
+font-weight: 500;
+font-size: 1.2rem;
+margin-bottom: .5rem;
+}
+
+.input-block{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.container {
+  display: inline-block;
+  position: relative;
+}
+
+
+.radiobuttons-container{
+   	-webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3; 
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+.container input{
+    display: inline-block;
+}
+
+
+input[type=checkbox] {
+  background-color: #f2f2f2;
+  padding: 0.5em;
+  outline: white;
+  -webkit-appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border: 3px solid #f2f2f2;
+}
+
+input[type=checkbox]:checked {
+  background-color: black;
+  height: 1rem;
+  width: 1rem;
+  border: 3px solid #f2f2f2;
+}
+
+
+.work-with{
+    margin-bottom: .5rem;
+}
+
+
+.save-btn{
+
+    width: 100%;
+    display: block;
+    border: none;
+    background-color: #4f4f4f;
+    color: #f1f1f1;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    border-radius: 5px;
+    font-size: .9rem;
+    margin-top: 1rem;
+
+}
+
+.btn-submitted{
+    background-color: #a39d9d;
+}
+.range-slider{
+    display: flex;
+    width: 100%;
+    margin-bottom: 3rem;
+    margin-top: 1.5rem;
+}
+
+.light-title{
+    margin-bottom: 1rem;
+}
+
+.light-text{
+    font-size: 1rem;
+    color: #838383;
+}

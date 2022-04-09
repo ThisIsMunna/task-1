@@ -1,0 +1,77 @@
+.sidebar {
+  background-color: #f2f2f2;
+  padding: 3rem;
+  border-radius: 5px;
+  margin-right: 5rem;
+  position: fixed;
+}
+
+.sidebar-options {
+  font-weight: 500;
+  white-space: nowrap;
+  margin-bottom: 1rem;
+  color: #5c5c5c;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.lvl-txt {
+  color: #7a7a7a;
+  margin-bottom: .2rem;
+}
+
+.person-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.profile-icon {
+  width: 7rem;
+  border-radius: 50%;
+}
+
+.camera-icon {
+  width: 2rem;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #999999;
+  top: 70%;
+  left: 60%;
+}
+
+.checked {
+  color: #4f4f4f;
+  font-size: 1.2rem;
+  margin-right: 0.3rem;
+}
+
+.not-checked {
+  color: #bdbdbd;
+}
+
+.rating-text {
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+  color: #4f4f4f;
+}
+
+.btn {
+  border: none;
+  background-color: #4f4f4f;
+  color: #f1f1f1;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
