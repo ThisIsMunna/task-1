@@ -8,6 +8,7 @@ import axios from "axios";
 const countryAndCity: {
   [key: string]: string[];
 } = CountryData;
+
 const subjects = [
   {
     subject: "Math",
@@ -50,11 +51,15 @@ const subjects = [
 
 const countries = Object.keys(countryAndCity);
 let years: number[] = [];
+
+// make an array of years from 1900 to the current year
 const currentYear = new Date().getFullYear();
 for (let i = currentYear; i > 1900; i--) {
   years.push(i);
 }
-const genders = ["Male", "Female"];
+
+const genders = ["Male", "Female", "Others"];
+
 const experienceRanges = ["0-1 year", "1-3 years", "3-5 years", "5-8 years"];
 
 const MiddleSection = () => {
@@ -69,7 +74,7 @@ const MiddleSection = () => {
   const [experienceRange, setExperienceRange] = useState<string>();
   const [ageMin, setAgeMin] = useState<number>(0);
   const [ageMax, setAgeMax] = useState<number>(17);
-  const [submitted, setSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState(false);
 
   const handleCountryChange = (str: string) => {
     setCountry(str);
@@ -123,29 +128,31 @@ const MiddleSection = () => {
     console.log(checkBox);
   };
 
-
   const handleClick = (e: any) => {
     e.preventDefault();
-    setSubmitted(true)
-    axios.post("https://public.devsfair.com/api/profile", {
-      firstName,
-      lastName,
-      year,
-      country,
-      city,
-      gender,
-      experienceRange,
-      checkBox,
-      ageMin,
-      ageMax
+    setSubmitted(true);
 
-    }).then(res => console.log(res.status)).catch(err => console.log(err))
-
-  }
+    axios
+      .post("https://public.devsfair.com/api/profile", {
+        firstName,
+        lastName,
+        year,
+        country,
+        city,
+        gender,
+        experienceRange,
+        checkBox,
+        ageMin,
+        ageMax,
+      })
+      .then((res) => console.log(res.status))
+      .catch((err) => console.log(err));
+  };
 
   return (
     <>
       <div className="middle-section">
+        {/* personal info */}
         <div className="profile-text">My Profile</div>
         <div className="personal-info">Personal Info</div>
         <form>
@@ -230,6 +237,8 @@ const MiddleSection = () => {
               </div>
             </div>
           </div>
+
+          {/* professional info */}
           <div className="professional-info">Professional info</div>
           <div className="light-text">My subjects are</div>
           <div className="radiobuttons-container">
@@ -239,7 +248,7 @@ const MiddleSection = () => {
                   type="checkbox"
                   onChange={(e) => handleRadioButtonChange(e, elem.subject)}
                 ></input>
-                {elem.subject}
+                <span className="check-subject">{elem.subject} </span>
               </label>
             ))}
           </div>
@@ -266,7 +275,12 @@ const MiddleSection = () => {
             ))}
             <option></option>
           </select>
-          <button className={`save-btn ${submitted? "btn-submitted" : ""}`} onClick={e => handleClick(e)}>Save</button>
+          <button
+            className={`save-btn ${submitted ? "btn-submitted" : ""}`}
+            onClick={(e) => handleClick(e)}
+          >
+            Save
+          </button>
         </form>
       </div>
     </>

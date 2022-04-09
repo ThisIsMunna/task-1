@@ -98,6 +98,15 @@ input[type=checkbox]:checked {
     margin-bottom: .5rem;
 }
 
+.check-subject{
+    font-size: .9rem;
+    text-align: center;
+}
+
+.radiobuttons-container input{
+    vertical-align: middle;
+    margin-right: .3rem;
+}
 
 .save-btn{
 
